@@ -1,0 +1,19 @@
+{
+  "name": "zparnold.github.io",
+  "version": "1.0.0",
+  "description": "A simple website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"well: no test specified\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zparnold/zparnold.github.io.git"
+  },
+  "author": "Zach Arnold",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zparnold/zparnold.github.io/issues"
+  },
+  "homepage": "https://github.com/zparnold/zparnold.github.io#readme"
+}
