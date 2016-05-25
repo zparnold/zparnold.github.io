@@ -1,6 +1,5 @@
 language: node_js
 node_js:
-- '0.11'
 - '0.10'
 deploy:
   provider: s3
@@ -8,6 +7,7 @@ deploy:
   secret_access_key:
     secure: Pt3e3lFNpuG3/MCrErdH2oja2khtKXGaOQB6HF48kXkzJTTf3V8IN466poxI9B31S30tTYCvECv68Zf9nI7FDME9qNLrivWtDRPh28F0oZbg0Pzbg5l7iHvMmQi/fOnPMi5His/Rl3nENPk2PabQ40zZmIlqgHaZFyPKyxyrr14R1ZToPuPO7M/nn3Rt5LTGOvxTV8KWFcVSl1oSmYujenG/4TSx+cmHb5M2KVW4/Ayb5QnxlgQ/rdO61xgYnGpGL+WMRxmmNWFJo5wzH3VfAuDlRww59I+/K0FxuPmVJApFCSbonNEmwr1noGop//GwwChphu7tZplE55ljLCo7aXdCM4kmXVt6dNxMDeVwnlhpptoX+8ymRF8vTTd2S3qnm6MjNc7l1ArUD3vqTHot022gQ4P7e4qIaeELgYs3fleYEQWahfect4EuiQ6UlZbE8Y0Le+W4RFbBDLq+9LMzlL8kQaTPMQzT084YKQbQzqL1Lng7t8TEKn7pSjKP6IyNSK5DOQaU+lbRJXhCmSftK6F6BX+lhnm7845YH7zhuNhXOOIYInnrpeeXW5e9LuTuK/3fRmbnzVMfL3GbAQdRpTke9DBFFOUqbMeALwQx9JEyRQQYAPnSHYvt8FpZtjEhR7pg1tKb4cWbpGx0K7YZQqx6eD11Zfm4HK+J0Si3Oco=
   bucket: zacharnold.org
+  skip_cleanup: true
   acl: public_read
   on:
     repo: zparnold/zparnold.github.io
