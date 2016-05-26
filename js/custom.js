@@ -197,11 +197,22 @@ $(document).ready(function(){
    var firebase = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentMessageThreadCount");
     firebase.once("value", function(snapshot){
         var data = snapshot.val();
-        $("#this-guy").text(data);
+        if(data == 1){
+            $("#this-guy").text(data + " email");
+        }
+        else{
+            $("#this-guy").text(data + " emails");
+        }
+
     });
     firebase.on('value', function(snapshot){
         var data = snapshot.val();
-        $("#this-guy").text(data);
+        if(data == 1){
+            $("#this-guy").text(data + " email");
+        }
+        else{
+            $("#this-guy").text(data + " emails");
+        }
     });
 });
 
