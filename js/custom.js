@@ -193,5 +193,16 @@ $(document).ready(function(){
 	
 });
 
+$(document).ready(function(){
+   var firebase = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentMessageThreadCount");
+    firebase.once("value", function(snapshot){
+        var data = snapshot.val();
+        $("#this-guy").text(data);
+    });
+    firebase.on('value', function(snapshot){
+        var data = snapshot.val();
+        $("#this-guy").text(data);
+    });
+});
 
 	
