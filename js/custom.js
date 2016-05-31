@@ -46,16 +46,6 @@ close_toggle();
 $(window).resize(close_toggle);
 
 
-/* ===================================================================
- TWEETIE -  TWITTER FEED PLUGIN THAT WORKS WITH NEW Twitter 1.1 API
- ==================================================================== */
-$('.tweet').twittie({
-    apiPath: 'twit-api/tweet.php',
-    dateFormat: '%b. %d, %Y',
-    template: '{{tweet}} <div class="date">{{date}}</div> <a href="{{url}}"{{screen_name}}',
-    count: 2
-});
-
 /***================================================== */
 $('.chart').each(function () {
     var $this = $(this);
