@@ -388,13 +388,6 @@
                                 </div>
                             </div>
                             <div class="row control-group">
-                                <div class="form-group col-xs-12  controls">
-                                    <label>Phone Number<span>*</span></label>
-                                    <input type="tel" class="form-control" placeholder="Phone Number" id="phone" required data-validation-required-message="Please enter your phone number.">
-                                    <p class="help-block"></p>
-                                </div>
-                            </div>
-                            <div class="row control-group">
                                 <div class="form-group col-xs-12 controls">
                                     <label>Message<span>*</span></label>
                                     <textarea rows="5" class="form-control" placeholder="Message" id="message" required data-validation-required-message="Please enter a message."></textarea>
@@ -410,19 +403,17 @@
                             <div id="success"></div>
                             <div class="row">
                                 <div class="form-group col-xs-12">
-                                    <button type="submit" class="btn btn-theme btn-lg">Send Message</button>
+                                    <button class="btn btn-theme btn-lg">Send Message</button>
                                 </div>
                             </div>
                         </form>
                     </div><!--form col-->
                     <div class="col-md-5">
                         <div class=" margin-btm-30 address-info wow animated bounceIn"  data-wow-duration="700ms" data-wow-delay="200ms">
-                            <h3>Our Office</h3>
-                            <p><i class="fa fa-map-marker"></i> Address: 302012 Jaipur Name, City Name</p>
-                            <p><i class="fa fa-phone"></i> Phone: (141) 456-7890</p>
-                            <p><i class="fa fa-envelope"></i> Email: support@quick.com</p>
-                            <p><strong>Monday - Friday : </strong> 9:30 Am - 5:30 Pm</p>
-                            <p><strong>Saturday - Sunday: </strong> Closed</p>
+                            <h3>My Office (or, where I work most of the time)</h3>
+                            <p><i class="fa fa-map-marker"></i> Address: 351 Northpoint Dr. Ste F Redding, CA 96003</p>
+                            <p><i class="fa fa-phone"></i> Phone: (843) 882-5039</p>
+                            <p><i class="fa fa-envelope"></i> Email: me@zacharnold.org</p>
                         </div>
                         <div class=" address-info wow animated bounceIn"  data-wow-duration="700ms" data-wow-delay="400ms">
                             <h3>Elsewhere</h3>
@@ -443,15 +434,8 @@
         </section><!--contact-->
 
         <div class="footer-btm">
-            <ul class="footer-nav list-inline text-center">
-                <li><a href="#">Terms of use</a></li>
-                <li><a href="#">Privacy and policy</a></li>
-                <li><a href="#">Contact us</a></li>
-                <li><a href="typography.html">Typography</a></li>
-                <li><a href="#">Sign In</a></li>
-            </ul>
             <div class="copyright text-center">
-                Copyright &copy; 2014. Quick Theme. Powered by <a href="#">bootstrap</a> and <a href="#">Design_mylife</a>
+                Copyright &copy; <span id="currentYear"></span>. Quick Theme. Powered by <a href="#">bootstrap</a> and <a href="#">Design_mylife</a>
             </div>
         </div><!--footer-btm-->
         <!--back to top-->
@@ -489,5 +473,6 @@
         <script src="js/firebase.js" type="text/javascript"></script>
         <!--customizable plugin edit according to your needs-->
         <script src="js/custom.js" type="text/javascript"></script>
+        <script src="https://sdk.amazonaws.com/js/aws-sdk-2.3.16.min.js"></script>
     </body>
 </html>
