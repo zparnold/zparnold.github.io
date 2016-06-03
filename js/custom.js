@@ -8,16 +8,15 @@
  Sticky Navbar
  =============================================== */
 
-$(document).ready(function() {
+$(document).ready(function () {
     $(".navbar").sticky({topSpacing: 0});
 });
-
 
 
 /* ==============================================
  main flex slider
  =============================================== */
-$(window).load(function() {
+$(window).load(function () {
     $('.main-flex-slider').flexslider({
         slideshowSpeed: 5000,
         directionNav: false,
@@ -33,7 +32,7 @@ $(window).load(function() {
 
 function close_toggle() {
     if ($(window).width() <= 768) {
-        $('.navbar-collapse a').on('click', function() {
+        $('.navbar-collapse a').on('click', function () {
             $('.navbar-collapse').collapse('hide');
         });
     }
@@ -66,7 +65,7 @@ $('.chart').each(function () {
 });
 
 //owl carousel for testimonials
-$(document).ready(function() {
+$(document).ready(function () {
 
     $("#testi-carousel,#work-slide").owlCarousel({
         // Most important owl features
@@ -96,7 +95,7 @@ $('#grid').mixitup();
 
 
 /************parallax*********************/
-$(function() {
+$(function () {
     $.stellar({
         horizontalScrolling: false
     });
@@ -106,7 +105,7 @@ $(function() {
 /* ==============================================
  Counter Up
  =============================================== */
-jQuery(document).ready(function($) {
+jQuery(document).ready(function ($) {
     $('.counter').counterUp({
         delay: 100,
         time: 800
@@ -118,12 +117,12 @@ jQuery(document).ready(function($) {
  =============================================== */
 
 var wow = new WOW(
-        {
-            boxClass: 'wow', // animated element css class (default is wow)
-            animateClass: 'animated', // animation css class (default is animated)
-            offset: 100, // distance to the element when triggering the animation (default is 0)
-            mobile: false        // trigger animations on mobile devices (true is default)
-        }
+    {
+        boxClass: 'wow', // animated element css class (default is wow)
+        animateClass: 'animated', // animation css class (default is animated)
+        offset: 100, // distance to the element when triggering the animation (default is 0)
+        mobile: false        // trigger animations on mobile devices (true is default)
+    }
 );
 wow.init();
 
@@ -132,80 +131,106 @@ wow.init();
 $('.show-image').magnificPopup({type: 'image'});
 
 
-
 //smooth scroll
-$(function() {
-	  $('.scrollto a[href*=#]:not([href=#])').click(function() {
-	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+$(function () {
+    $('.scrollto a[href*=#]:not([href=#])').click(function () {
+        if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
 
-	      var target = $(this.hash);
-	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-	      if (target.length) {
-	        $('html,body').animate({
-	          scrollTop: target.offset().top - 50
-	        }, 1000);
-	        return false;
-	      }
-	    }
-	  });
-	});	
-        
-        
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+            if (target.length) {
+                $('html,body').animate({
+                    scrollTop: target.offset().top - 50
+                }, 1000);
+                return false;
+            }
+        }
+    });
+});
+
 
 // Backstretch - Slider on Background
-								  
-			 
+
+
 $(".fullscreen").backstretch([
-   "img/showcase-5.jpg",
-   "img/showcase-2.jpg",
-   "img/showcase-3.jpg"
+    "img/showcase-5.jpg",
+    "img/showcase-2.jpg",
+    "img/showcase-3.jpg"
 ], {duration: 5000, fade: 1000});
 
 
 //back to top
 
-$(document).ready(function(){
-	
-	//Check to see if the window is top if not then display button
-	$(window).scroll(function(){
-		if ($(this).scrollTop() > 800) {
-			$('.scrollToTop').fadeIn();
-		} else {
-			$('.scrollToTop').fadeOut();
-		}
-	});
-	
-	//Click event to scroll to top
-	$('.scrollToTop').click(function(){
-		$('html, body').animate({scrollTop : 0},800);
-		return false;
-	});
-	
+$(document).ready(function () {
+
+    //Check to see if the window is top if not then display button
+    $(window).scroll(function () {
+        if ($(this).scrollTop() > 800) {
+            $('.scrollToTop').fadeIn();
+        } else {
+            $('.scrollToTop').fadeOut();
+        }
+    });
+
+    //Click event to scroll to top
+    $('.scrollToTop').click(function () {
+        $('html, body').animate({scrollTop: 0}, 800);
+        return false;
+    });
+
 });
 
-$(document).ready(function(){
-   var firebase = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentMessageThreadCount");
-    firebase.once("value", function(snapshot){
+$(document).ready(function () {
+    var firebaseMessage = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentMessageThreadCount");
+    var firebaseClients = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentClientNum");
+    var firebaseHours = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentHoursCount");
+    var firebaseProjects = new Firebase("https://emailresponsetimestorage.firebaseio.com/currentProjectNum");
+    firebaseMessage.once("value", function (snapshot) {
         var data = snapshot.val();
-        if(data == 1){
+        if (data == 1) {
             $("#this-guy").text(data + " email");
         }
-        else{
+        else {
             $("#this-guy").text(data + " emails");
         }
 
     });
-    firebase.on('value', function(snapshot){
+    firebaseMessage.on('value', function (snapshot) {
         var data = snapshot.val();
-        if(data == 1){
+        if (data == 1) {
             $("#this-guy").text(data + " email");
         }
-        else{
+        else {
             $("#this-guy").text(data + " emails");
         }
     });
+    firebaseClients.once("value", function (snapshot) {
+        var data = snapshot.val();
+        $("#clients").text(data);
+
+    });
+    firebaseClients.on('value', function (snapshot) {
+        $("#clients").text(data);
+    });
+    firebaseHours.once("value", function (snapshot) {
+        var data = snapshot.val();
+        $("#hours").text(data);
+
+    });
+    firebaseHours.on('value', function (snapshot) {
+        var data = snapshot.val();
+        $("#hours").text(data);
+    });
+    firebaseProjects.once("value", function (snapshot) {
+        var data = snapshot.val();
+        $("#projects").text(data);
+    });
+    firebaseProjects.on('value', function (snapshot) {
+        var data = snapshot.val();
+        $("#projects").text(data);
+    });
 });
-$(document).ready(function (){
-   var date = new Date();
+$(document).ready(function () {
+    var date = new Date();
     $("#currentYear").text(date.getFullYear());
 });
