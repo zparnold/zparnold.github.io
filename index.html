@@ -18,8 +18,8 @@
         <!-- animated css  -->
         <link href="css/animate.css" rel="stylesheet" type="text/css" media="screen">
         <!--web fonts-->      
-        <link href='http://fonts.googleapis.com/css?family=Lato:300,400,400italic' rel='stylesheet' type='text/css'>
-        <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Lato:300,400,400italic' rel='stylesheet' type='text/css'>
+        <link href='//fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
         <!--owl carousel css-->
         <link href="css/owl.carousel.css" rel="stylesheet" type="text/css" media="screen">
         <link href="css/owl.theme.css" rel="stylesheet" type="text/css" media="screen">
@@ -38,19 +38,11 @@
             <div class="parallax-overlay"></div> 
             <div class="home-content text-center">
                 <div class="container">
-                    <span class="home-top-slide-text hidden-xs">You don't need a website, you need:</span>
+                    <!--<span class="home-top-slide-text hidden-xs">You don't need a website, you need:</span>-->
                     <div class="main-flex-slider">
                         <ul class="slides">
                             <li>
-                                <h1>A digital <span class="colored-text">presence</span> </h1>
-
-                            </li>
-                            <li>
-                                <h1><span class="colored-text">Radical</span> honesty</h1>
-
-                            </li>
-                            <li>
-                                <h1>Someone you <span class="colored-text">can trust</span></h1>
+                                <h1>Let's solve your digital challenge <span class="colored-text">together.</span> </h1>
 
                             </li>
                         </ul>
@@ -298,6 +290,10 @@
         </section><!--work-->
         <section class="fun-facts parallax" data-stellar-background-ratio="0.5">
             <div class="container">
+                <div class="row center-heading text-center">
+                    <h2 style="color:white"><span id="current-year"></span> BY THE NUMBERS</h2>
+                    <span class="icon" style="color:white"><i class="fa fa-clock-o fa-lg"></i></span>
+                </div>
                 <div class="row">
                     <div class="col-md-4 margin-btm-30 text-center">
                         <div class="fact-inner">
@@ -334,7 +330,7 @@
                 <div class="row">
                     <div class="col-md-12 text-center">
                         <p class="lead">
-                            Ready to start your project? Give me a call or drop us a line.
+                            Ready to start your project? Give me a call or send an email here.
                         </p>
                     </div>
                 </div>
@@ -373,7 +369,7 @@
                             </div>
                             <br>
                             <div class="row">
-                                <div class="col-xs-12">
+                                <div class="col-xs-12 text-danger">
                                 Radical honesty policy: I have <em id="this-guy"></em> in my inbox currently, and according to Gmail I usually get back to people in about 36 hours.</div>
                             </div>
                             <br>
@@ -395,12 +391,10 @@
                         <div class=" address-info wow animated bounceIn"  data-wow-duration="700ms" data-wow-delay="400ms">
                             <h3>Elsewhere</h3>
                             <ul class="list-inline social">
-                                <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                                <li><a href="#"><i class="fa fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-                                <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-                                <li><a href="#"><i class="fa fa-dribbble"></i></a></li>
-                                <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                                <li><a href="https://facebook.com/zparnold"><i class="fa fa-facebook"></i></a></li>
+                                <li><a href="https://twitter.com/zparnold"><i class="fa fa-twitter"></i></a></li>
+                                <li><a href="https://instagram.com/zacharnold2011"><i class="fa fa-instagram"></i></a></li>
+                                <li><a href="https://linkedin.com/in/zparnold"><i class="fa fa-linkedin"></i></a></li>
                             </ul>
                         </div>
                     </div>
@@ -467,5 +461,9 @@
             };
         </script>
         <script>(function(){var w=window;var ic=w.Intercom;if(typeof ic==="function"){ic('reattach_activator');ic('update',intercomSettings);}else{var d=document;var i=function(){i.c(arguments)};i.q=[];i.c=function(args){i.q.push(args)};w.Intercom=i;function l(){var s=d.createElement('script');s.type='text/javascript';s.async=true;s.src='https://widget.intercom.io/widget/nlo3eais';var x=d.getElementsByTagName('script')[0];x.parentNode.insertBefore(s,x);}if(w.attachEvent){w.attachEvent('onload',l);}else{w.addEventListener('load',l,false);}}})()</script>
+        <script>
+            var d = new Date();
+            $("#current-year").text(d.getFullYear());
+        </script>
     </body>
 </html>
